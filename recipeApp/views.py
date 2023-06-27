@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Recipes
 from django.contrib import messages
 from .forms import RecipesForm
@@ -30,5 +30,12 @@ def view_recipe(request):
         "recipes" : recipes
     }
     return render(request, 'view_recipe.html', context)
+
+def recipe_details(request, pk):
+    recipes = get_object_or_404(Recipes, pk=pk)
+    context = {
+        "recipes" : recipes
+    }
+    return render(request, 'recipe_details.html', context)
 
 

@@ -2,10 +2,16 @@
 
 {% block content %}
 
+<section id="view-display">
 {% for item in recipes %}
-    <h1>{{ item.name }}</h1>
-    <h3>{{item.instructions}}</h3>
-    <h5>{{item.ingredients}}</h5>
+    <div>
+        <h1>{{ item.name }}</h1>
+        <ul>
+            <li><a href="{% url 'details' item.id %}">View Recipe</a></li>
+            <li><a href="">Edit Recipe</a></li>
+        </ul>
+    </div>
 {% endfor %}
+</section>
 
 {% endblock %}
