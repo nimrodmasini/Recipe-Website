@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pika recipe | home</title>
+    <link rel="shortcut icon" type="image/png" href="{% static './images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static './css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+
+</head>
+<body>
+    <section id="header">
+        <img src="{% static  './images/logo_transparent.png' %}" alt="logo" width="80px" height="80px">
+        <h2>pika recipe</h2>
+    </section>
+
+    <section id="header-list">
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'home' %}">Search Recipe</a></li>
+            <li><a href="{% url 'create' %}">Create Recipe</a></li>
+            <li><a href="{% url 'view' %}">View Recipes</a></li>
+        </ul>
+    </section>
+
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    <footer>
+        <article>
+            <img src="{% static './images/logo_transparent.png' %}" width="40px" height="40px"/>
+        </article>
+        <article>
+            <p>&copyRecipe App 2023</p>
+        </article>
+    </footer>
+            <script src="{%static './javascript/scripts.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px 25px 50px;
+}
+
+.recipe .name {
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.recipe .ingredients {
+    font-size: 25px;
+}
+
+.recipe .instructions {
+    font-size: 25px;
+}
+
